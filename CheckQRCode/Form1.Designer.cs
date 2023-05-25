@@ -47,7 +47,7 @@
             this.btn_measure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_measure.BackColor = System.Drawing.Color.ForestGreen;
             this.btn_measure.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_measure.Location = new System.Drawing.Point(181, 12);
+            this.btn_measure.Location = new System.Drawing.Point(138, 12);
             this.btn_measure.Name = "btn_measure";
             this.btn_measure.Size = new System.Drawing.Size(122, 65);
             this.btn_measure.TabIndex = 0;
@@ -64,22 +64,24 @@
             this.dtg_listerror.Location = new System.Drawing.Point(9, 83);
             this.dtg_listerror.Name = "dtg_listerror";
             this.dtg_listerror.ReadOnly = true;
-            this.dtg_listerror.Size = new System.Drawing.Size(299, 199);
+            this.dtg_listerror.Size = new System.Drawing.Size(256, 196);
             this.dtg_listerror.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 287);
+            this.ClientSize = new System.Drawing.Size(272, 284);
             this.Controls.Add(this.dtg_listerror);
             this.Controls.Add(this.btn_measure);
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcherCheckQR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_listerror)).EndInit();
             this.ResumeLayout(false);

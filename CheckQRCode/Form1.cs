@@ -216,7 +216,7 @@ namespace CheckQRCode
             {
                 conn.Open();
                 DataTable dt = new DataTable();
-                SQLiteDataAdapter adap = new SQLiteDataAdapter("SELECT * from DataCheckQR Where FirstCheck ='NG' or ReCheck ='NG' ", conn);
+                SQLiteDataAdapter adap = new SQLiteDataAdapter("SELECT * from DataCheckQR Where FirstCheck ='NG' or ReCheck ='NG' ORDER By TimeUpdate ASC ", conn);
                 adap.Fill(dt);
                 dtg_listerror.DataSource = dt;
                 conn.Close();
@@ -232,5 +232,14 @@ namespace CheckQRCode
             PortAdruino.Close();
         }
 
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.H)
+            {
+                Checkdata ef = new Checkdata();
+                ef.Show();
+            }
+
+        }
     }
 }

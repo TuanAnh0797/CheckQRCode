@@ -35,11 +35,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Txb_CodeCheckSheet = new System.Windows.Forms.TextBox();
             this.txb_CodeLen = new System.Windows.Forms.TextBox();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.timerendcheck = new System.Windows.Forms.Timer(this.components);
             this.CheckRecivedBarcode = new System.Windows.Forms.Timer(this.components);
             this.TimerCheckEnd = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            this.timesearch = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lbl_CSV
@@ -102,12 +101,6 @@
             this.txb_CodeLen.Size = new System.Drawing.Size(205, 24);
             this.txb_CodeLen.TabIndex = 8;
             // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            this.fileSystemWatcher1.Changed += new System.IO.FileSystemEventHandler(this.FileSystemWatcher1_Changed);
-            // 
             // timerendcheck
             // 
             this.timerendcheck.Interval = 2000;
@@ -122,6 +115,11 @@
             // 
             this.TimerCheckEnd.Interval = 30000;
             this.TimerCheckEnd.Tick += new System.EventHandler(this.TimerCheckEnd_Tick);
+            // 
+            // timesearch
+            // 
+            this.timesearch.Interval = 2000;
+            this.timesearch.Tick += new System.EventHandler(this.timesearch_Tick);
             // 
             // CheckQR
             // 
@@ -140,7 +138,6 @@
             this.Text = "CheckQR";
             this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CheckQR_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,9 +151,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Txb_CodeCheckSheet;
         private System.Windows.Forms.TextBox txb_CodeLen;
-        private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Timer timerendcheck;
         private System.Windows.Forms.Timer CheckRecivedBarcode;
         private System.Windows.Forms.Timer TimerCheckEnd;
+        private System.Windows.Forms.Timer timesearch;
     }
 }

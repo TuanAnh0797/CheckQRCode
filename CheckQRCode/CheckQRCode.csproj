@@ -37,6 +37,7 @@
     <Reference Include="KAutoHelper">
       <HintPath>..\..\..\..\Downloads\Project-20230406T064428Z-001\Project\AutoControlAppPC\AutoControlAppPC\bin\Debug\KAutoHelper.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,9 +49,16 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaptureandMoveMouse.cs" />
+    <Compile Include="Checkdata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkdata.Designer.cs">
+      <DependentUpon>Checkdata.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckQR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +66,12 @@
       <DependentUpon>CheckQR.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlAdruino.cs" />
+    <Compile Include="ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,8 +80,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Checkdata.resx">
+      <DependentUpon>Checkdata.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CheckQR.resx">
       <DependentUpon>CheckQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -1,4 +1,4 @@
 ﻿WatchPath:"C:\Users\TA\OneDrive\Desktop\abc"
 Com:"Com6"
 DelayStart(s):"1"
-ComBarcode:"Com13"
+ComBarcode:"Com18"
